@@ -15,9 +15,14 @@ Class OpenWeatherMapClient {
     private $lang   = "en";
     private $units  = "metric";
     private $cnt    = "7";
-    private $appid  = "fdfdc708e54e4c1bd4d7ade4fe1f567e";
+    private $appid  = "";
 
     private $result = [];
+
+    public function __construct($appid)
+    {
+        $this->appid = $appid;
+    }
 
     public function setLat($lat)
     {

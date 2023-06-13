@@ -29,7 +29,7 @@ Class Weather implements Arrayable, Jsonable {
 
     public function __construct($lat, $lng)
     {
-        $this->client = new OpenWeatherMapClient();
+        $this->client = new OpenWeatherMapClient(config('services.openweathermap.appid'));
 
         $this->client
             ->setLat($lat)
